@@ -7,7 +7,7 @@ from sklearn.base import RegressorMixin
 from src.evaluation import MSE,RMSE,R2
 import mlflow
 from zenml.client import Client
-experiment_tracker=Client().active_stack.experiment_tracker
+experiment_tracker = Client().active_stack.experiment_tracker
 
 @step(experiment_tracker=experiment_tracker.name)
 def evaluate_model(model:RegressorMixin,
