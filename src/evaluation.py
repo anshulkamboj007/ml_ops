@@ -26,7 +26,7 @@ class MSE(Evaluation):
 class R2(Evaluation):
     def calculate_scores(self,y_true:np.ndarray,y_pred:np.ndarray):
         try:
-            logging.info("calculating MSE")
+            logging.info("calculating r2")
             r2=r2_score(y_true,y_pred)
             logging.info("r2: {}".format(r2))
             return r2
@@ -37,7 +37,7 @@ class R2(Evaluation):
 class RMSE(Evaluation):
     def calculate_scores(self,y_true:np.ndarray,y_pred:np.ndarray):
         try:
-            logging.info("calculating MSE")
+            logging.info("calculating RMSE")
             rmse=mean_squared_error(y_true,y_pred,squared=False)
             logging.info("MSE: {}".format(rmse))
             return rmse
