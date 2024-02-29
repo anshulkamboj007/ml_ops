@@ -1,5 +1,6 @@
 from sklearn.base import BaseEstimator,TransformerMixin
 from prediction_model.config import config
+import numpy as np
 
 class MeanImputer(BaseEstimator,TransformerMixin):
     def __init__(self,variables=None):
@@ -75,4 +76,18 @@ class CustomLabelEncoder(BaseEstimator,TransformerMixin):
         X=X.copy()
         for feature in self.variables:
             X[feature]=X[feature].map(self.label_dict[feature])
+        return X
+    
+
+class LogTransforms(BaseEstimator,TransformerMixin):
+    def __init__(self,variables=None):
+        self.variables=variables
+
+    def fit(self,X,y=None):
+        return self
+    
+    def transform(self,X):
+        X=X.copy()
+        for col in self.variables:
+            X[col]=np.log(X[col]) 
         return X
