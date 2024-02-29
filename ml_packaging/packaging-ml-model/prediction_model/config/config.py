@@ -30,7 +30,7 @@ CAT_FEATURES =['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed',
 FEATURES_TO_ENCODE =['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed',
        'Credit_History', 'Property_Area']
 
-FEATURES_TO_MODIFY ='ApplicantIncome'
+FEATURES_TO_MODIFY =['ApplicantIncome']
 FEATURES_TO_ADD ='CoapplicantIncome'
 
 DROP_FEATURES=['CoapplicantIncome']
