@@ -17,7 +17,7 @@ TARGET='Loan_Status'
 
 #final features used in model
 FEATURES = ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed',
-       'ApplicantIncome', 'LoanAmount',
+       'ApplicantIncome', 'LoanAmount','CoapplicantIncome',
        'Loan_Amount_Term', 'Credit_History', 'Property_Area']
 
 NUM_FEATURES = ['ApplicantIncome', 'LoanAmount','Loan_Amount_Term']
