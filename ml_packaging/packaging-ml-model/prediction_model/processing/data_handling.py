@@ -7,6 +7,7 @@ from prediction_model.config import config
 
 def load_dataset(file_name):
     filepath=os.path.join(config.DATAPATH,file_name)
+    logging.info(f"dataset loaded")
     _data=pd.read_csv(filepath)
     return _data
 
