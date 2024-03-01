@@ -4,7 +4,7 @@ import prediction_model
 
 PACKAGE_ROOT=pathlib.Path(prediction_model.__file__).resolve().parent
 
-DATAPATH=os.path.join(PACKAGE_ROOT,"datasets")
+DATAPATH=os.path.join(PACKAGE_ROOT,"dataset")
 
 TRAIN_FILE='train.csv'
 TEST_FILE='test.csv'
