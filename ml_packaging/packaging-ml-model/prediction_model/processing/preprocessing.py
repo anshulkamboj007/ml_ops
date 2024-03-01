@@ -43,7 +43,7 @@ class DropColumns(BaseEstimator,TransformerMixin):
     
     def transform(self,X):
         X=X.copy()
-        X=X.drop(columns=variables_to_drop)
+        X=X.drop(columns=self.variables_to_drop)
         return X
     
 
