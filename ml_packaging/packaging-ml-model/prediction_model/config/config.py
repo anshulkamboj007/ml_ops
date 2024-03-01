@@ -2,7 +2,7 @@ import os
 import pathlib
 import prediction_model
 
-PACKAGE_ROOT=pathlib.PATH(prediction_model.__file__).resolve().parent
+PACKAGE_ROOT=pathlib.Path(prediction_model.__file__).resolve().parent
 
 DATAPATH=os.path.join(PACKAGE_ROOT,"datasets")
 
