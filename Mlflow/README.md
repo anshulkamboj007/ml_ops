@@ -66,7 +66,7 @@ pip install mlflow
 - Serve the Models with Local REST server
 `mlflow models serve -m runs:/<RUN_ID>/model --port 9000`
 
-`mlflow models serve -m /Users/nachiketh/Desktop/author-repo/Complete-MLOps-BootCamp/MLFlow-Manage-ML-Experiments/mlruns/636758781795674813/91ef1ea3f63d40a7a33c4251dd088618/artifacts/RandomForestClassifier --port 9000`
+`mlflow models serve -m file:///C:/Users/91738/Desktop/ml_ops/Mlflow/mlruns/812928829315112920/7a138374c8624bbba297766bcc974680/artifacts/RandomForestClassifier --port 9000--no-conda`
 
 
 # Generate Predictions
@@ -154,11 +154,13 @@ LogisticRegression/
 - Installation
 `pip install mysqlclient`
 
+127.0.0.1:5000
+
 -port 5001
-`mlflow server --host 0.0.0.0 --port 5001 --backend-store-uri mysql://root:admin123@localhost/db_mlflow --default-artifact-root $PWD/mlruns`
+`mlflow server --host 127.0.0.1 --port 5000 --backend-store-uri mysql://root:1947@localhost/mlflow_db --default-artifact-root $PWD/mlruns`
 
 - port 5000
-`mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri mysql://root:admin123@localhost/db_mlflow --default-artifact-root $PWD/mlruns`
+`mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri mysql://root:admin123@localhost/db_mlflow--default-artifact-root $PWD/mlruns`
 
 `export MLFLOW_TRACKING_URI=http://0.0.0.0:5001`
 
